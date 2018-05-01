@@ -1,5 +1,16 @@
 {
   "expo": {
-    "sdkVersion": "23.0.0"
+    "sdkVersion": "23.0.0",
+    "android": {
+      "package": "com.rahulakrishna.fastidio"
+    },
+    "name": "fastidio",
+    "slug": "fastidio",
+    "version": "0.1.0",
+    "isDetached": true,
+    "detach": {
+      "scheme": "exp555d7535c6134191a3841bd1966fa028",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.1.2-sdk23.0.0-d47f172b-1ed3-4c8f-9e48-239052c678b6.tar.gz"
+    }
   }
 }
