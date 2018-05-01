@@ -5,6 +5,10 @@ import {StackNavigator} from 'react-navigation'
 import {curck, mami, white} from "../utils/colors"
 
 import Home from './Home/Home'
+import Login from './Login/Login'
+
+import { connect } from 'react-redux'
+
 
 const MainNavigator=StackNavigator({
     Main:{
@@ -23,9 +27,26 @@ const MainNavigator=StackNavigator({
 
 class App extends React.Component{
     render(){
-        return (<MainNavigator/>)
+      if(this.props.login.token) {
+        return(<MainNavigator/>)
+      }
+      else {
+        return(<Login/>)
+      }
     }
 }
 
-export default App
+function mapStateToProps(state) {
+  return {
+    login:state.login
+  }
+}
 
+function mapDispatchToProps(dispatch) {
+  return {
+
+  }
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(App)

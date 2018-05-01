@@ -31,7 +31,7 @@ class Tweets extends React.Component{
                         <View style={styles.tweet}>
                             <Text style={styles.tweetText}>{tweet.text}</Text>
                             <View>
-                                
+
                             </View>
                         </View>
                     </GestureRecognizer>
