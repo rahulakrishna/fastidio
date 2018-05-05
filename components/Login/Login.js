@@ -3,7 +3,7 @@ import { View,TouchableOpacity,Text,ImageBackground } from 'react-native'
 import { connect } from 'react-redux'
 import {pinched, white} from '../../utils/colors'
 import background from '../../static/background.jpg'
-import TwitterButton from './TwitterButon'
+import TwitterButton from './TwitterButton'
 
 const styles = {
   loginContainer: {
@@ -16,7 +16,7 @@ const styles = {
   loginButton: {
       backgroundColor:pinched,
       padding:10,
-      width:200
+      width:200,
   },
   loginButtonText: {
       color:white,
@@ -27,19 +27,19 @@ const styles = {
       padding:40,
       textAlign:'center',
       color:white,
-      fontWeight:'700'
+      fontWeight:'700',
+      height:300
   }
 }
-
+{/* <TouchableOpacity style={styles.loginButton} onPress={console.log('Pressed login')}>
+    <Text style={styles.loginButtonText}>Log In</Text>
+</TouchableOpacity> */}
 class Login extends React.Component {
   render() {
     return (
       <ImageBackground source={background} style={styles.loginContainer}>
         <Text style={styles.bannerText}>Connect with the world in truly native way!</Text>
-        <TouchableOpacity style={styles.loginButton} onPress={console.log('Pressed login')}>
-            <Text style={styles.loginButtonText}>Log In</Text>
-            <TwitterButton/>
-        </TouchableOpacity>
+        <TwitterButton style={styles.loginButton}/>
       </ImageBackground>
     )
   }

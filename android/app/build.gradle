@@ -7,7 +7,7 @@ android {
   defaultConfig {
     applicationId "com.rahulakrishna.fastidio"
     minSdkVersion 19
-    targetSdkVersion 25
+    targetSdkVersion 26
     versionCode 1
     versionName "1.0"
     multiDexEnabled true
@@ -58,7 +58,7 @@ dependencies {
   compile 'com.android.support:appcompat-v7:26.0.1'
   compile 'com.android.support:multidex:1.0.1'
 
-  
+
   compile('host.exp.exponent:expoview:23.0.0@aar') {
     exclude group: 'com.facebook.android', module: 'facebook-android-sdk'
     exclude group: 'com.facebook.android', module: 'audience-network-sdk'
@@ -73,6 +73,6 @@ dependencies {
   compile('io.nlopez.smartlocation:library:3.2.11') {
     transitive = false
   }
-  
-  
+
+
 }

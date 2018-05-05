@@ -12,8 +12,7 @@ import Icon from "react-native-vector-icons/Ionicons"
 const { RNTwitterSignIn } = NativeModules
 
 const Constants = {
-  //Dev Parse keys
-  TWITTER_COMSUMER_KEY: "kpyc9tUDpHA8XbCZAYpwVUQV5,
+  TWITTER_COMSUMER_KEY: "kpyc9tUDpHA8XbCZAYpwVUQV5",
   TWITTER_CONSUMER_SECRET: "RjLeIDfRmtCmpUlYc0QxurGva1ckr89ItdTJ5PUdMKykomuhBD"
 }
 
@@ -23,7 +22,14 @@ export default class TwitterButton extends Component {
   }
 
   _twitterSignIn = () => {
-    RNTwitterSignIn.init(Constants.TWITTER_COMSUMER_KEY, Constants.TWITTER_CONSUMER_SECRET)
+    RNTwitterSignIn.init(Constants.TWITTER_COMSUMER_KEY, Constants.TWITTER_CONSUMER_SECRET).then(() => {
+      console.log('Done!')
+    })
+    .then((loginData)=>{
+      Alert.alert('Success', JSON.stringify(loginData));
+    }).catch((error)=>{
+      Alert.alert('Error', JSON.stringify(error));
+    });
     RNTwitterSignIn.logIn()
       .then(loginData => {
         console.log(loginData)
