@@ -11,7 +11,9 @@ import java.util.List;
 import com.rahulakrishna.fastidio.generated.ExponentBuildConstants;
 import host.exp.expoview.ExponentActivity;
 
+
 public class MainActivity extends ExponentActivity {
+
 
   @Override
   public String publishedUrl() {
@@ -43,4 +45,6 @@ public class MainActivity extends ExponentActivity {
     // Add extra initialProps here
     return expBundle;
   }
+
+
 }

@@ -7,9 +7,9 @@ import TwitterButton from './TwitterButton'
 
 const styles = {
   loginContainer: {
+    flexDirection:'column',
       alignItems:'center',
       justifyContent:'center',
-      flexDirection:'column',
       width:'100%',
       height:'100%'
   },
@@ -38,7 +38,7 @@ class Login extends React.Component {
   render() {
     return (
       <ImageBackground source={background} style={styles.loginContainer}>
-        <Text style={styles.bannerText}>Connect with the world in truly native way!</Text>
+        <Text style={styles.bannerText}>Connect with the world in a truly native way!</Text>
         <TwitterButton style={styles.loginButton}/>
       </ImageBackground>
     )
